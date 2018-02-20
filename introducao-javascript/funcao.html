@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>Aparecida Nutrição</title>
+		<link rel="icon" href="favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="css/reset.css">
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+		
+
+	</head>
+	<body>
+
+		<ul>
+    <li class="convidado">
+        Nome <span class="nome">Douglas</span>,
+        idade <span class="idade">23</span>
+    </li>
+    <li class="convidado">
+        Nome <span class="nome">Daniel</span>,
+        idade <span class="idade">42</span>
+    </li>    
+    <li class="convidado">
+        Nome <span class="nome">Marcos</span>,
+        idade <span class="idade">27</span>
+    </li>    
+    <li class="convidado">
+        Nome <span class="nome">Flávio</span>,
+        idade <span class="idade">18</span>
+    </li>
+
+    Total das idades: <span class="total"></span>
+</ul>
+
+<script>
+
+    function criaListaDeConvidados(){
+    	var itens = document.querySelectorAll(".convidado");
+    	var convidados = [];
+    	 for(var i = 0; i < itens.length; i++) {
+
+            var convidado = {
+                nome:  itens[i].querySelector('.nome').textContent,
+                idade: parseInt(itens[i].querySelector('.idade').textContent)
+            };
+            console.log(convidado);
+            convidados.push(convidado);
+        }
+        return convidados;
+
+    }
+   
+    function calculaTotalIdades(convidados){
+    	var total = 0;
+    	 for(var i = 0; i < convidados.length; i++) {
+
+            total+=convidados[i].idade;
+        }
+        return total;
+        console.log(total);
+    }
+
+    function exibeTotalIdades(total){
+    	document.querySelector(".total").textContent= total;
+    }
+
+    var convidados = criaListaDeConvidados();
+    var totalIdades =calculaTotalIdades(convidados);
+    exibeTotalIdades(totalIdades);
+
+
+</script>
+
+	</body>
+</html>

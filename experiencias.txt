@@ -1,0 +1,18 @@
+Angular JS;
+Redux;
+HTML5;
+Bootstrap;
+Webpack;
+Ionic;
+Phonegap;
+.Net c# (web API);
+NodeJS;
+Gulp.
+Conhecimentos Desejáveis
+Preferred Tech and Prof Experience
+Mobile Iron;
+Grunt;
+Yeoman;
+Moment;
+SASS;
+API Gateway.

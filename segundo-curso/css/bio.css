@@ -1,0 +1,113 @@
+h1{
+    -webkit-animation: aparece 5s ease-in;
+    -o-animation: aparece 5s ease-in;
+    animation: aparece 5s ease-in;
+}
+@keyframes aparece{
+    0%{
+    opacity: 0;
+    }
+    100%{
+    opacity: 1;
+    }
+}
+.citacao-bio {
+    background-color: #D9E5E3;
+    border: .5em solid #C2CCCA;
+    padding: 1em;
+    margin: 1em 2em;
+    width: 30ch;
+    box-sizing: border-box;
+   transition: box-shadow 1s, transform 1s;
+    /* vale quando o usuário parou de interagir */
+    transition-delay: 1s, 0s;
+    position: relative;
+    -webkit-animation: quica 1s infinite;
+    animation: quica 1s infinite;
+    -webkit-animation-direction:alternate;
+    animation-direction:alternate;
+    animation-timing-function: ease-in;
+    -webkit-animation-timing-function: ease-in;
+}
+@keyframes quica{
+    from{
+        top:0;
+    }
+    90%{
+        transform:rotate(-2deg);
+    }
+    95%{
+        transform:rotate(2deg);
+    }
+    to{
+        top:1em;
+    }
+}
+
+.petrobras {
+    float: left;
+    margin-left: 0;
+}
+
+.fiat {
+    float: right;
+    margin-right: 0;
+}
+.citacao-bio:hover,.citacao-bio:focus {
+    box-shadow: 0 0 0 99999px rgba(0,0,0,.8);
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+     /* vale quando o usuário começou a interagir */
+    transition-delay: 0s, 1s
+}
+.citacao-bio:nth-of-type(odd):hover,.citacao-bio:nth-of-type(odd):focus {
+    transform: scale(1.2) rotate(5deg);
+}
+.citacao-bio:nth-of-type(even):hover,.citacao-bio:nth-of-type(even):focus {
+    transform: scale(1.2) rotate(-5deg);
+}
+.container p:first-letter{
+    font-size: 200%;
+    font-weight: bold;
+    color: #3C1D3D;
+    text-shadow: 1px 1px #000;
+    margin-right: .2ch;
+    line-height: 1;}
+    .container:before {
+    background-color: red;
+    width: 100px;
+    height: 100px;
+    display: block;
+}
+.habilidades th {
+    font-weight: bold;
+    background-color: #851944;
+    color: white;
+}
+.habilidades thead th {
+  /* não precisamos colocar font-weight e color
+     pois já fizemos isso para todos os th */
+    background-color: #3C1D3D;
+}
+.habilidades td {
+    background-color: #eee;
+}
+.habilidades th,
+.habilidades td {
+    padding: 1em;
+}
+
+.habilidades {
+    border-collapse: separate;
+    border-spacing: .25em;
+}
+.habilidades {
+    margin: 1em 0;
+}
+.habilidades [colspan] {
+    text-align: center;
+    font-style: italic;
+}
+.habilidades [rowspan] {
+    vertical-align: middle;
+}
